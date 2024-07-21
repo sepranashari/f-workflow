@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         run: |
           git clone ${{ secrets.GH_ADDRESS }}
-          cd ./famfina
+          cd ${{ secrets.MAIN_PROJECT_WORKING_DIRECTORY }}
           git config user.name "${{ secrets.GH_USER }}"
           git config user.email "${{ secrets.GH_MAIL }}"
           git checkout ${{ secrets.GH_BRANCH }}
